@@ -7,7 +7,8 @@ public class Empwage {
      static final int NUM_OF_WORKING_DAYS = 20;
      static final int MAX_HRS_IN_MONTH = 100;
 
-    static int computeEmpWage(){
+    public static int computeEmpWage(String company, int empRatePerHour,
+                                     int numOfWorkingDays, int maxHoursPerMonth){
 
         int empHrs, totalEmpHrs = 0, totalWorkingDays = 0;
         while ( totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS ) {
@@ -28,6 +29,8 @@ public class Empwage {
     }
 
     public static void main(String[] args) {
-        computeEmpWage();
+        computeEmpWage("DMart",20,2,10);
+        computeEmpWage("Relience",10,4,20);
+
     }
 }
